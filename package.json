@@ -1,0 +1,18 @@
+// fork from electron-quick-start
+{
+  "name": "awesome-answering-machine",
+  "version": "1.0.0",
+  "description": "這很酷",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+  },
+  "author": "weitalu, dreamstyle, bandnagt, jennnnnn",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}
