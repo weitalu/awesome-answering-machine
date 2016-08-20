@@ -228,7 +228,7 @@ section {
 .output {
   position: relative;
   width: 350px;
-  height: 470px;
+  height: 400px;
   margin: 0 auto; }
 
 .output__title {
@@ -248,7 +248,7 @@ section {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 50px 30px;
   background-color: #fffaf4;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
   color: #424242;
