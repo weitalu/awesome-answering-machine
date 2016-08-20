@@ -1,7 +1,7 @@
 const _ = require('lodash');
 
 var ModalService = function(selector) {
-	this.$modal = $(selector);
+  this.$modal = $(selector);
 };
 
 ModalService.prototype = _.assignIn(ModalService.prototype, {
@@ -17,11 +17,13 @@ ModalService.prototype = _.assignIn(ModalService.prototype, {
 
     this.$modal.modal('show');
   },
+
   hide: function() {
-  	this.$modal.modal('hide');
+    this.$modal.modal('hide');
   },
+
   toggle: function() {
-  	this.$modal.modal('toggle');
+    this.$modal.modal('toggle');
   },
 });
 
