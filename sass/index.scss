@@ -83,12 +83,27 @@ section {
 	padding-top: 159px;
 }
 
-.app-header, 
+.app-header,
 .input-area {
+	margin-top: 0;
 	text-align: center;
+	
 }
 
 .app-header {
+	transition: all 0.6s ease-out 0.3s;
+
+	&.is-silde-up {
+		margin-top: -400px;
+	}
+}
+
+.input-area {
+	transition: all 0.6s ease-out 0.6s;
+
+	&.is-silde-up {
+		margin-top: -200px;
+	}	
 }
 
 .app-header__title {

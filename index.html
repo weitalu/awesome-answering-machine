@@ -104,10 +104,8 @@
       function onGetReply (e) {
         validateService.validate().done(
           function(data) {
-            $('.stuff--top-left').addClass('is-fly-away');
-            $('.stuff--top-right').addClass('is-fly-away');
-            $('.stuff--bottom-left').addClass('is-fly-away');
-            $('.stuff--bottom-right').addClass('is-fly-away');
+            stuffFlyAway();
+            stepOneSlideUp();
             inputContentService.render(data.text);
           },
           function(error) {
@@ -120,6 +118,18 @@
             }
           }
         );
+      }
+
+      function stuffFlyAway() {
+        $('.stuff--top-left').addClass('is-fly-away');
+        $('.stuff--top-right').addClass('is-fly-away');
+        $('.stuff--bottom-left').addClass('is-fly-away');
+        $('.stuff--bottom-right').addClass('is-fly-away');
+      }
+
+      function stepOneSlideUp() {
+        $('.app-header').addClass('is-silde-up');
+        $('.input-area').addClass('is-silde-up');
       }
     </script>
   </body>
