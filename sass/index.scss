@@ -288,6 +288,7 @@ section {
 
 // Step 3
 .step-3 {
+	position: relative;
 }
 
 .output {
@@ -331,6 +332,32 @@ section {
 		height: 150px;
 		background: url('../img/step-3/img-step-3-envelop.svg');
 	}
+}
+
+.output-copy {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 366px;
+	height: 95px;
+    padding: 15px;
+	border-radius: 12px;
+	background-color: #fff2ee;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+	text-align: center;
+}
+
+.output-copy__wow {
+	font-size: 18px;
+	font-weight: 600;
+	color: #2f81a3;
+}
+
+.output-copy__msg {
+	font-size: 14px;
+	font-weight: 600;
+	color: #2f81a3;
 }
 
 .output-actions {
