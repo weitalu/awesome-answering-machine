@@ -123,7 +123,7 @@
             stuffFlyAway();
             stepOneSlideUp();
             stepTwoSlideUp();
-            // stepThreeSplit();
+            stepThreeSplit();
             inputContentService.render(data.text);
             aa.getAnswer().then(function(text){
               clipboard.writeText(text)
@@ -161,14 +161,15 @@
           $('.processing-bar')
             .show()
             .attr('src', 'img/step-2/Step2_TimeCounter.gif');
-        }, 3000);
+        }, 1800);
       }
 
       function stepThreeSplit() {
         window.setTimeout(function(){
           $('.input').fadeOut('400');
+          $('.processing-bar').fadeOut('slow');
           $('.step-2').addClass('is-slide-up');
-        }, 6000);
+        }, 9000);
        
       }
 
