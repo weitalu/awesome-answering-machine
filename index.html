@@ -105,11 +105,11 @@
           },
           function(error) {
             if (error.type == 'string_empty') {
-              modalService.show('沒有複製內容')
+              modalService.show({title: '', body:'沒有複製內容'})
             }
 
             if (error.type == 'string_too_long') {
-              modalService.show('超出字數')
+              modalService.show({title: '', body:'超出字數'})
             }
           }
         );
