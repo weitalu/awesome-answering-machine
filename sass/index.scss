@@ -77,6 +77,10 @@ section {
 	}
 }
 
+.material-icons {
+	font-size: 16px;
+}
+
 
 // Specific Styles
 // Step 1
@@ -246,6 +250,11 @@ section {
 // Step 2
 .step-2 {
 	text-align: center;
+	transition: all 0.6s ease-out 0.6s;
+
+	&.is-slide-up {
+		height: 0;
+	}
 }
 
 .input {
@@ -323,3 +332,19 @@ section {
 		background: url('../img/step-3/img-step-3-envelop.svg');
 	}
 }
+
+.output-actions {
+	margin: 30px 30px 0;
+}
+
+.btn-back {
+	float: left;
+}
+
+.btn-copy,
+.btn-share {
+	float: right;
+	margin-right: 8px;
+	border-radius: 100%;
+}
+

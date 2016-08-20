@@ -52,6 +52,9 @@ section {
     color: #ffc2c2;
     box-shadow: none; }
 
+.material-icons {
+  font-size: 16px; }
+
 .step-1 {
   position: relative;
   padding-top: 159px;
@@ -177,7 +180,10 @@ section {
     right: -120px; }
 
 .step-2 {
-  text-align: center; }
+  text-align: center;
+  transition: all 0.6s ease-out 0.6s; }
+  .step-2.is-slide-up {
+    height: 0; }
 
 .input {
   width: 400px;
@@ -235,5 +241,17 @@ section {
     width: 145px;
     height: 150px;
     background: url("../img/step-3/img-step-3-envelop.svg"); }
+
+.output-actions {
+  margin: 30px 30px 0; }
+
+.btn-back {
+  float: left; }
+
+.btn-copy,
+.btn-share {
+  float: right;
+  margin-right: 8px;
+  border-radius: 100%; }
 
 /*# sourceMappingURL=index.css.map */

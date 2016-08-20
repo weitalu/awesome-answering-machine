@@ -58,7 +58,7 @@
         </div>
       </main>
       <div class="output-actions">
-        <button class="btn  btn-action btn-back"><i class="material-icons">keyboard_arrow_left</i>我有新的客戶問題</button>
+        <button class="btn  btn-action btn-back"><!-- <i class="material-icons">keyboard_arrow_left</i> --><span>我有新的客戶問題</span></button>
         <button class="btn  btn-action btn-copy"><i class="material-icons">content_copy</i></button>
         <button class="btn  btn-action btn-share"><i class="material-icons">share</i></button>
       </div>
@@ -108,6 +108,7 @@
             stuffFlyAway();
             stepOneSlideUp();
             stepTwoSlideUp();
+            // stepThreeSplit();
             inputContentService.render(data.text);
           },
           function(error) {
@@ -142,6 +143,14 @@
             .show()
             .attr('src', 'img/step-2/Step2_TimeCounter.gif');
         }, 3000);
+      }
+
+      function stepThreeSplit() {
+        window.setTimeout(function(){
+          $('.input').fadeOut('400');
+          $('.step-2').addClass('is-slide-up');
+        }, 6000);
+       
       }
 
     </script>
