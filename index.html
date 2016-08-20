@@ -59,7 +59,7 @@
         <div class="output-actions">
           <button class="btn  btn-action btn-back"><i class="material-icons">keyboard_arrow_left</i>我有新的客戶問題</button>
           <button class="btn  btn-action btn-copy"><i class="material-icons">content_copy</i></button>
-          <button class="btn  btn-action btn-share"><i class="material-icons">share</i></button>
+          <button id="fbShareBtn" class="btn  btn-action btn-share"><i class="material-icons">share</i></button>
         </div>
       </main>
     </section>
@@ -100,6 +100,15 @@
       var inputContentService = new InputContentService('.input__content')
 
       $('#getReplyBtn').on('click', onGetReply);
+      $('#fbShareBtn').on('click',onShareFb);
+
+      function onShareFb(){
+        aa.fbShare().then(function(data){
+          modalService.show({title:'',body:'請到 "https://www.facebook.com/device" 輸入以下驗證碼'+data.user_code'以分享本App至您的facebook'});
+        },function(err){
+          alert("hi");
+        })
+      }
 
       function onGetReply (e) {
         validateService.validate().done(

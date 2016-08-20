@@ -15,6 +15,7 @@ var options = {
 module.exports=function(){
     var deferred = q.defer();
     request(options,function (err,response,body){
-        q.resolve(JSON.parse(body));
-});    
+        deferred.resolve(JSON.parse(body));
+    });    
+    return deferred.promise;
 }

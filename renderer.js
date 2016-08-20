@@ -16,6 +16,6 @@ module.exports = {
              })
         },
         "fbShare":function(){
-            fbShareAsync()
+            return fbShareAsync()
         }
 }
