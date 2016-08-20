@@ -12,11 +12,34 @@
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <!-- 第一階段：輸入 -->
+    <section class="step-1">
+      <header class="app-header">
+        <h1 class="app-header__title">完美回覆</h1>
+        <p class="app-header__desc">Hi，對客戶的問題感到吃驚、疑惑、不解嗎？<br>試試看完美回覆吧 :)</p>
+      </header>
+      <main class="input-area">
+        <p class="inut-area__tip">請複製好客戶問題的文字。</p>
+        <input class="btn btn-default  input-area__button" type="button" value="複製好了，幫助我回覆！">
+      </main>
+    </section>
+
+
+    <!-- 第二階段：解析 -->
+    <section class="step-2"></section>
+
+
+    <!-- 第三階段：輸出 -->
+    <section class="step-3"></section>
+
+
     <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-    <!-- <button onclick="aa()">clipboard</button> -->
+
+
+    <!-- 複製剪接簿之測試按鈕 -->
+    <button onclick="aa()">clipboard</button>
   </body>
 </html>
