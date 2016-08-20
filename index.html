@@ -98,20 +98,21 @@
     <script>
       var ValidateService = require('./validateService.js')
       var ModalService = require('./modalService.js')
-      var validateService = new ValidateService()
+      var InputContentService = require('./inputContentService.js')
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
+      var inputContentService = new InputContentService('.input__content')
 
       $('#getReplyBtn').on('click', onGetReply);
 
       function onGetReply (e) {
-        validateService.validate()
-        .done(
+        validateService.validate().done(
           function(data) {
             $('.stuff--top-left').addClass('is-fly-away');
             $('.stuff--top-right').addClass('is-fly-away');
             $('.stuff--bottom-left').addClass('is-fly-away');
             $('.stuff--bottom-right').addClass('is-fly-away');
+            inputContentService.render(data.text);
           },
           function(error) {
             if (error.type == 'string_empty') {
