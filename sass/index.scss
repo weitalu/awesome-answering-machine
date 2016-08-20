@@ -77,6 +77,7 @@ section {
 
 
 // Specific Styles
+// Step 1
 .app-header, 
 .input-area {
 	text-align: center;
@@ -109,4 +110,9 @@ section {
 .inut-area__tip {
 	margin-bottom: 18px;
 	font-family: 'NotoSans-medium';
+}
+
+.input-area__button {
+	font-size: 18px;
+	font-family: 'NotoSans-regular';
 }
