@@ -21,7 +21,7 @@
       </header>
       <main class="input-area">
         <p class="inut-area__tip">請複製好客戶問題的文字。</p>
-        <input class="btn btn-default  input-area__button" type="button" value="複製好了，幫助我回覆！">
+        <input id="getReplyBtn" class="btn btn-default  input-area__button" type="button" value="複製好了，幫助我回覆！">
       </main>
     </section>
 
@@ -58,6 +58,27 @@
       </main>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using node <script>document.write(process.versions.node)</script>,
@@ -67,5 +88,32 @@
 
     <!-- 取得答案之測試按鈕 -->
     <button onclick="aa.alertAnswer()">取得答案</button>
+
+    <script>
+      var ValidateService = require('./validateService.js')
+      var ModalService = require('./modalService.js')
+      var validateService = new ValidateService()
+      var modalService = new ModalService('#validateModal')
+
+      $('#getReplyBtn').on('click', onGetReply);
+
+      function onGetReply (e) {
+        validateService.validate()
+        .done(
+          function(data) {
+
+          },
+          function(error) {
+            if (error.type == 'string_empty') {
+              modalService.show('沒有複製內容')
+            }
+
+            if (error.type == 'string_too_long') {
+              modalService.show('超出字數')
+            }
+          }
+        );
+      }
+    </script>
   </body>
 </html>
