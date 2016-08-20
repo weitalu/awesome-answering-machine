@@ -20,7 +20,7 @@
     <section class="step-1">
       <header class="app-header">
         <h1 class="app-header__title">完美回覆</h1>
-        <p class="app-header__desc">Hi，對客戶的問題感到吃驚、疑惑、不解嗎？<br>試試看完美回覆吧 :)</p>
+        <p class="app-header__desc">Hi，對客戶的問題感到<strong>吃驚、疑惑、不解嗎？</strong><br>試試看完美回覆吧 😀</p>
       </header>
       <main class="input-area">
         <p class="inut-area__tip">請複製好客戶問題的文字。</p>
@@ -53,14 +53,15 @@
       <main class="output">
         <h2 class="output__title">專屬您的完美回覆：</h2>
         <div class="output__content">
-          <h3>您好：</h3>
-          <p>請問你是在大聲什麼啦</p>
-          <h3>祝 新鮮的肝</h3>
+          <h3>尊敬的客戶您好：</h3>
+          <h3 class="output__answer">請問你是在大聲什麼啦</h3>
+          <h3>Best Regards,</h3>
+          <h3>親切的工程師</h3>
         </div>
       </main>
       <div class="output-copy">
         <p class="output-copy__wow">Yes!</p>
-        <p class="output-copy__msg">完美回覆已經成功複製到剪貼簿囉 :)</p>
+        <p class="output-copy__msg">完美回覆已經成功複製到剪貼簿囉 ✅</p>
       </div>
       <div class="output-actions">
         <button class="btn  btn-action btn-back"><!-- <i class="material-icons">keyboard_arrow_left</i> --><span>我有新的客戶問題</span></button>
@@ -104,7 +105,7 @@
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
       var inputContentService = new InputContentService('.input__content')
-      var outputContentService = new InputContentService('.output__content')
+      var outputContentService = new InputContentService('.output__answer')
 
       $('#getReplyBtn').on('click', onGetReply);
       $('#fbShareBtn').on('click',onShareFb);
