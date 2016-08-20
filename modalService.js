@@ -1,4 +1,4 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
 var ModalService = function(selector) {
 	this.$modal = $(selector);
