@@ -10,7 +10,7 @@ module.exports = {
                     var text = clipboard.readText("String");
                     alert(text);
                 },
-        "getAnswer" : function (){
+        "getAnswer" : function (text){
              return answerAsync()
         },
         "fbShare":function(){
