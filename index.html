@@ -25,6 +25,10 @@
         <p class="inut-area__tip">請複製好客戶問題的文字。</p>
         <input id="getReplyBtn" class="btn btn-default  btn-action input-area__button" type="button" value="複製好了，幫助我回覆！">
       </main>
+      <div class="stuff--top-left"></div>
+      <div class="stuff--top-right"></div>
+      <div class="stuff--bottom-left"></div>
+      <div class="stuff--bottom-right"></div>
     </section>
 
 
@@ -103,9 +107,16 @@
         validateService.validate()
         .done(
           function(data) {
-
+            $('.stuff--top-left').addClass('is-fly-away');
+            $('.stuff--top-right').addClass('is-fly-away');
+            $('.stuff--bottom-left').addClass('is-fly-away');
+            $('.stuff--bottom-right').addClass('is-fly-away');
           },
           function(error) {
+            $('.stuff--top-left').addClass('is-fly-away');
+            $('.stuff--top-right').addClass('is-fly-away');
+            $('.stuff--bottom-left').addClass('is-fly-away');
+            $('.stuff--bottom-right').addClass('is-fly-away');
             if (error.type == 'string_empty') {
               modalService.show({title: '', body:'沒有複製內容'})
             }
