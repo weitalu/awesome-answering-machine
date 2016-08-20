@@ -1,10 +1,10 @@
 const _ = require('lodash');
 
-var InputContentService = function(selector) {
+var RenderContentService = function(selector) {
   this.$inputContent = $(selector);
 };
 
-InputContentService.prototype = _.assignIn(InputContentService.prototype, {
+RenderContentService.prototype = _.assignIn(RenderContentService.prototype, {
   render: function(rawText) {
   	var content = this._replaceLineBreak(rawText);
 		this._updateHtml(content);
@@ -17,4 +17,4 @@ InputContentService.prototype = _.assignIn(InputContentService.prototype, {
   }
 });
 
-module.exports = InputContentService;
+module.exports = RenderContentService;
