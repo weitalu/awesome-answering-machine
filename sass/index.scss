@@ -1,0 +1,119 @@
+// Variable
+$color-text-1: #ffffff;
+$color-text-2: #ffefda;
+$color-text-3: #cef1ff;
+$color-bg: #2f81a3;
+$color-button: #ff7373;
+$color-button--hover: #df5151;
+$color-button--shadow: #de5f5f;
+$color-highlight-text: #ffe07c;
+
+
+// Font Face
+@font-face {
+    font-family: 'NotoSans-light';
+    src: url('../fonts/NotoSansCJKtc-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-demilight';
+    src: url('../fonts/NotoSansCJKtc-DemiLight.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-regular';
+    src: url('../fonts/NotoSansCJKtc-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-medium';
+    src: url('../fonts/NotoSansCJKtc-Medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-bold';
+    src: url('../fonts/NotoSansCJKtc-Bold.otf') format("opentype");
+}
+
+
+// Typography
+h1 { font-size: 36px; }
+h2 { font-size: 14px; }
+h3 { font-size: 16px; }
+p  { font-size: 16px; }
+
+h1, h3 { font-weight: normal; }
+
+
+// General Styles
+body {
+	background-color: $color-bg;
+	color: $color-text-1;
+	font-family: 'NotoSans-light' !important;
+}
+
+section {
+	width: 90%;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.btn-action {
+	margin-top: 0;
+	border: none;
+	color: $color-text-1;
+	background-color: $color-button;
+	box-shadow: 0 4px 0 0 $color-button--shadow;
+	transition: all 0.2s ease-out;
+
+	&:hover, &:focus, &:active {
+		margin-top: 3px;
+		background-color: $color-button--hover;
+		box-shadow: 0 0 0 0 $color-button--shadow;
+		color: #ffc2c2;
+		box-shadow: none;
+	}
+}
+
+
+// Specific Styles
+// Step 1
+.app-header, 
+.input-area {
+	text-align: center;
+}
+
+.app-header {
+	margin-top: 159px;
+}
+
+.app-header__title {
+	width: 337px;
+	height: 86px;
+    margin: 20px auto;
+    padding: 15px 0 0 20px;
+	background-image: url('../img/step-1/img-step-1-title-b-g.svg');
+	background-repeat: no-repeat;
+	letter-spacing: 18.5px;
+    text-align: center;
+    color: $color-text-2;
+}
+
+.app-header__desc {
+	
+}
+
+.input-area {
+	margin-top: 64px;
+}
+
+.inut-area__tip {
+	margin-bottom: 18px;
+	font-family: 'NotoSans-medium';
+}
+
+.input-area__button {
+	padding: 10px 20px;
+	font-size: 18px;
+	font-family: 'NotoSans-regular';
+}
