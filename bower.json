@@ -1,0 +1,17 @@
+{
+  "name": "awesome-answering-machine",
+  "version": "0.1.0",
+  "homepage": "https://github.com/weitalu/awesome-answering-machine",
+  "authors": [
+    "Nate Lee <mydreamstyle@gmail.com>"
+  ],
+  "description": "在客戶答錄機中，輸入客戶丟過來的無腦問題，答錄機會告訴你該怎麼回答",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
