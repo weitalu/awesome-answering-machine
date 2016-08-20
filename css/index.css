@@ -241,6 +241,7 @@ section {
   margin: 0;
   padding-left: 15px;
   background: url("../img/step-3/img-step-3-title-flag.svg") no-repeat;
+  font-family: 'NotoSans-medium';
   line-height: 38px; }
 
 .output__content {
