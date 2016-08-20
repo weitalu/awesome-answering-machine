@@ -9,6 +9,33 @@ $color-button--shadow: #de5f5f;
 $color-highlight-text: #ffe07c;
 
 
+// Font Face
+@font-face {
+    font-family: 'NotoSans-light';
+    src: url('../fonts/NotoSansCJKtc-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-demilight';
+    src: url('../fonts/NotoSansCJKtc-DemiLight.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-regular';
+    src: url('../fonts/NotoSansCJKtc-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-medium';
+    src: url('../fonts/NotoSansCJKtc-Medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSans-bold';
+    src: url('../fonts/NotoSansCJKtc-Bold.otf') format("opentype");
+}
+
+
 // Typography
 h1 { font-size: 36px; }
 h2 { font-size: 14px; }
