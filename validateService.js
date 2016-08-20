@@ -22,7 +22,7 @@ ValidateService.prototype = _.assignIn(ValidateService.prototype, {
       deferred.reject({type: 'string_too_long', message: 'String too long'});
     }
 
-    deferred.resolve({type: 'success', message: 'Success'});
+    deferred.resolve({type: 'success', message: 'Success', text: text});
 
     return deferred.promise;
   },
