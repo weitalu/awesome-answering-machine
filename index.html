@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>客戶答錄機</title>
     <script>
-    // You can also require other files to run in this process
-    const aa = require('./renderer.js')
-    const jQuery = require('./bower_components/jquery/dist/jquery.min.js')
+      // You can also require other files to run in this process
+      const aa = require('./renderer.js')
     </script>
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script>
+      window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
     <!-- 第一階段：輸入 -->
