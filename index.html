@@ -102,11 +102,16 @@
     <script>
       var ValidateService = require('./validateService.js')
       var ModalService = require('./modalService.js')
-      var InputContentService = require('./inputContentService.js')
+      var RenderContentService = require('./renderContentService.js')
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
+<<<<<<< bee2dc7f1ca612069d4cd0f3db5654677a37338b
       var inputContentService = new InputContentService('.input__content')
       var outputContentService = new InputContentService('.output__answer')
+=======
+      var inputContentService = new RenderContentService('.input__content')
+      var outputContentService = new RenderContentService('.output__content')
+>>>>>>> Integrate with answering flow
 
       $('#getReplyBtn').on('click', onGetReply);
       $('#fbShareBtn').on('click',onShareFb);
@@ -120,35 +125,40 @@
       }
 
       function onGetReply (e) {
-        validateService.validate().done(
-          function(data) {
-            stuffFlyAway();
-            stepOneSlideUp();
-            stepTwoSlideUp();
-            stepThreeSplit();
-            inputContentService.render(data.text);
-            aa.getAnswer().then(function(text){
-              clipboard.writeText(util.format(
-`尊敬的客戶您好：
+        validateService.validate()
+        .then(stepOne, onValidateError)
+        .then(stepTwo)
+      }
 
-   %s
+      function onValidateError() {
+        if (error.type == 'string_empty') {
+          modalService.show({title: '', body:'沒有複製內容'})
+        }
 
-Best Regards,
+        if (error.type == 'string_too_long') {
+          modalService.show({title: '', body:'超出字數'})
+        }
+      }
 
-親切的工程師`,text))
-              outputContentService.render(text)
-            })
-          },
-          function(error) {
-            if (error.type == 'string_empty') {
-              modalService.show({title: '', body:'沒有複製內容'})
-            }
+      function stepOne(data) {
+        stuffFlyAway();
+        stepOneSlideUp();
+        stepTwoSlideUp();
+        stepThreeSplit();
+        inputContentService.render(data.text);
+        return aa.fetchAnswer(data.text);
+      }
 
-            if (error.type == 'string_too_long') {
-              modalService.show({title: '', body:'超出字數'})
-            }
-          }
-        );
+      function stepTwo(answer) {
+        clipboard.writeText(util.format(
+        `尊敬的客戶您好：
+
+           %s
+
+        Best Regards,
+
+        親切的工程師`,answer))
+        outputContentService.render(answer)
       }
 
       function stuffFlyAway() {
