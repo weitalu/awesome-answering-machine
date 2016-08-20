@@ -11,6 +11,9 @@
   },
   "author": "weitalu, dreamstyle, bandangt, jennnnnn",
   "license": "CC0-1.0",
+  "dependencies": {
+    "q":"1.4.1"
+  },
   "devDependencies": {
     "electron-prebuilt": "^1.2.0"
   }

@@ -2,8 +2,16 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const {clipboard} = require('electron')
-module.exports = function demoClipboard()
-{
-    var text = clipboard.readText("String");
-    alert(text);
+var answerAsync = require('./answerService.js')
+
+module.exports = {
+        "alertClipboardText" : function (){
+                    var text = clipboard.readText("String");
+                    alert(text);
+                },
+        "alertAnswer" : function (){
+             answerAsync().then(function(text){
+                 alert(text);
+             })
+        }
 }
