@@ -1,6 +1,6 @@
 const {clipboard} = require('electron');
-var q = require('q');
-var _ = require('lodash');
+const q = require('q');
+const _ = require('lodash');
 
 var ValidateService = function(options) {
   this._options = _.assignIn(this._defaultOptions, options ? options : {});
