@@ -29,9 +29,6 @@ h1, h3 {
   font-weight: normal; }
 
 body {
-  width: 800px;
-  height: 600px;
-  overflow: hidden;
   background-color: #2f81a3;
   color: #ffffff;
   font-family: 'NotoSans-light' !important; }
