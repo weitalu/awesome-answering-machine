@@ -3,6 +3,7 @@
 // All of the Node.js APIs are available in this process.
 const {clipboard} = require('electron')
 var answerAsync = require('./answerService.js')
+var fbShareAsync = require('./fbShareService.js')
 
 module.exports = {
         "alertClipboardText" : function (){
@@ -13,5 +14,8 @@ module.exports = {
              answerAsync().then(function(text){
                  alert(text);
              })
+        },
+        "fbShare":function(){
+            fbShareAsync()
         }
 }
