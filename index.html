@@ -99,6 +99,7 @@
       var ValidateService = require('./validateService.js')
       var ModalService = require('./modalService.js')
       var validateService = new ValidateService()
+      var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
 
       $('#getReplyBtn').on('click', onGetReply);

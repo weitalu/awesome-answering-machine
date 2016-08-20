@@ -8,7 +8,7 @@ var ValidateService = function(options) {
 
 ValidateService.prototype = _.assignIn(ValidateService.prototype, {
   _defaultOptions: {
-    textLengthLimit: 160,
+    lengthLimit: 160,
   },
   validate: function() {
     var text = clipboard.readText('String').trim();
