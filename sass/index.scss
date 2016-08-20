@@ -240,14 +240,16 @@ section {
 	}
 }
 
+
 // Step 2
 .step-2 {
-
+	text-align: center;
 }
 
 .input {
 	width: 400px;
 	margin: 150px auto 0;
+	text-align: left;
 	transition: all 0.6s ease-out 0.6s;
 	
 	&.is-slide-up {
@@ -257,4 +259,12 @@ section {
 
 .input__title {
 	display: none;
+}
+
+.processing-bar {
+	display: none;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

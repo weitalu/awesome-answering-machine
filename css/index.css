@@ -176,14 +176,25 @@ section {
     bottom: -250px;
     right: -120px; }
 
+.step-2 {
+  text-align: center; }
+
 .input {
   width: 400px;
   margin: 150px auto 0;
+  text-align: left;
   transition: all 0.6s ease-out 0.6s; }
   .input.is-slide-up {
     margin: 0 auto 0; }
 
 .input__title {
   display: none; }
+
+.processing-bar {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=index.css.map */

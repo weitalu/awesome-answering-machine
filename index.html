@@ -42,8 +42,8 @@
           Regards,<br>
           Mike
         </p>
-        </main>
-      <div class="processing-bar">進度：■■□□□</div>
+      </main>
+      <img class="processing-bar" src="" width="75" height="75" />
     </section>
 
 
@@ -63,6 +63,7 @@
         </div>
       </main>
     </section>
+
 
     <!-- Modal -->
     <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -136,6 +137,11 @@
 
       function stepTwoSlideUp() {
         $('.input').addClass('is-slide-up');
+        window.setTimeout(function(){
+          $('.processing-bar')
+            .show()
+            .attr('src', 'img/step-2/Step2_TimeCounter.gif');
+        }, 3000);
       }
 
     </script>
