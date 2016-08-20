@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>682359FE-A977-45A0-ABFD-CBF9C4F5B384</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="mockup_element" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AAM_mockup_Step3" transform="translate(-156.000000, -690.000000)">
+            <g id="img_step3_email" transform="translate(156.000000, 690.000000)">
+                <rect id="Rectangle-13" fill="#ECECEC" x="0" y="0" width="26" height="16"></rect>
+                <polygon id="Triangle" fill="#FEF7E7" points="26 0 0 0 13 10.6666667"></polygon>
+                <path d="M26,8.58131021 L0,8.58131021 L9.32684853,14.95996 C11.3554741,16.3473409 14.646459,16.3460189 16.6731515,14.95996 L26,8.58131021 Z" id="Triangle" fill="#E1E1E1" transform="translate(13.000000, 12.290655) scale(1, -1) translate(-13.000000, -12.290655) "></path>
+                <path d="M26,-3.55271368e-15 L0,-3.55271368e-15 L11.5087347,10.2258784 C12.3323378,10.9576761 13.6625444,10.9622234 14.4912653,10.2258784 L26,-3.55271368e-15 Z" id="Triangle" fill="#F8F8F8"></path>
+            </g>
+        </g>
+    </g>
+</svg>
