@@ -1,0 +1,20 @@
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 14px; }
+
+h3 {
+  font-size: 16px; }
+
+p {
+  font-size: 16px; }
+
+h1, h3 {
+  font-weight: normal; }
+
+body {
+  background-color: #2f81a3;
+  color: #ffffff; }
+
+/*# sourceMappingURL=index.css.map */

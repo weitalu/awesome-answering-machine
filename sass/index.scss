@@ -1,0 +1,26 @@
+// Variable
+$color-text-1: #ffffff;
+$color-text-2: #ffefda;
+$color-text-3: #cef1ff;
+$color-bg: #2f81a3;
+$color-button: #ff7373;
+$color-button--hover: #df5151;
+$color-button--shadow: #de5f5f;
+$color-highlight-text: #ffe07c;
+
+
+// Typography
+h1 { font-size: 36px; }
+h2 { font-size: 14px; }
+h3 { font-size: 16px; }
+p  { font-size: 16px; }
+
+h1, h3 { font-weight: normal; }
+
+
+// Styles
+body {
+	background-color: $color-bg;
+	color: $color-text-1;
+}
+
