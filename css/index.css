@@ -74,11 +74,11 @@ section {
   margin-top: 64px; }
 
 .inut-area__tip {
-  padding: 10px 20px;
   margin-bottom: 18px;
   font-family: 'NotoSans-medium'; }
 
 .input-area__button {
+  padding: 10px 20px;
   font-size: 18px;
   font-family: 'NotoSans-regular'; }
 
