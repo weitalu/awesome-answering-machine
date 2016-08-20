@@ -104,7 +104,7 @@
 
       function onShareFb(){
         aa.fbShare().then(function(data){
-          modalService.show({title:'',body:'請到 "https://www.facebook.com/device" 輸入以下驗證碼'+data.user_code'以分享本App至您的facebook'});
+          modalService.show({title:'',body:'請到 "https://www.facebook.com/device" 輸入以下驗證碼'+data.user_code+'以分享本App至您的facebook'});
         },function(err){
           alert("hi");
         })
