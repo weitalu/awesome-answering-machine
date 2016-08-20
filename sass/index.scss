@@ -47,6 +47,19 @@ p  { font-size: 16px; }
 h1, h3 { font-weight: normal; }
 
 
+// Keyframes
+@keyframes shining-animation {
+    0% {
+        width: 0%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+
 // General Styles
 body {
 	background-color: $color-bg;
@@ -258,7 +271,7 @@ section {
 }
 
 .input {
-	width: 400px;
+	width: 500px;
 	margin: 150px auto 0;
 	line-height: 1.8;
 	text-align: left;
@@ -274,7 +287,17 @@ section {
 }
 
 .input__content {
+	position: relative;
+	padding: 15px 30px;
 
+	&::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        animation: shining-animation 2s infinite;
+    }
 }
 
 .processing-bar {

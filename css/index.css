@@ -28,6 +28,13 @@ p {
 h1, h3 {
   font-weight: normal; }
 
+@keyframes shining-animation {
+  0% {
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.2); }
+  100% {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); } }
 body {
   background-color: #2f81a3;
   color: #ffffff;
@@ -186,7 +193,7 @@ section {
     height: 0; }
 
 .input {
-  width: 400px;
+  width: 500px;
   margin: 150px auto 0;
   line-height: 1.8;
   text-align: left;
@@ -196,6 +203,17 @@ section {
 
 .input__title {
   display: none; }
+
+.input__content {
+  position: relative;
+  padding: 15px 30px; }
+  .input__content::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    animation: shining-animation 2s infinite; }
 
 .processing-bar {
   display: none;
