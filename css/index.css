@@ -52,9 +52,16 @@ section {
     color: #ffc2c2;
     box-shadow: none; }
 
+.material-icons {
+  font-size: 16px; }
+
 .step-1 {
   position: relative;
-  padding-top: 159px; }
+  padding-top: 159px;
+  transition: all 0.6s ease-out 0.6s; }
+  .step-1.is-slide-up {
+    height: 0;
+    padding-top: 100px; }
 
 .app-header,
 .input-area {
@@ -171,5 +178,106 @@ section {
   .stuff--bottom-right.is-fly-away {
     bottom: -250px;
     right: -120px; }
+
+.step-2 {
+  text-align: center;
+  transition: all 0.6s ease-out 0.6s; }
+  .step-2.is-slide-up {
+    height: 0; }
+
+.input {
+  width: 400px;
+  margin: 150px auto 0;
+  line-height: 1.8;
+  text-align: left;
+  transition: all 0.6s ease-out 0.6s; }
+  .input.is-slide-up {
+    margin: 0 auto 0; }
+
+.input__title {
+  display: none; }
+
+.processing-bar {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.step-3 {
+  position: relative; }
+
+.output {
+  position: relative;
+  width: 350px;
+  height: 470px;
+  margin: 0 auto; }
+
+.output__title {
+  position: absolute;
+  z-index: 100;
+  left: -20px;
+  top: -20px;
+  width: 150px;
+  height: 38px;
+  margin: 0;
+  padding-left: 15px;
+  background: url("../img/step-3/img-step-3-title-flag.svg") no-repeat;
+  line-height: 38px; }
+
+.output__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background-color: #fffaf4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  color: #424242;
+  text-align: left; }
+  .output__content::after {
+    content: '';
+    position: absolute;
+    z-index: -100;
+    right: -80px;
+    bottom: -55px;
+    width: 145px;
+    height: 150px;
+    background: url("../img/step-3/img-step-3-envelop.svg"); }
+
+.output-copy {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 366px;
+  height: 95px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #fff2ee;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  text-align: center; }
+
+.output-copy__wow {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2f81a3; }
+
+.output-copy__msg {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f81a3; }
+
+.output-actions {
+  margin: 30px 30px 0; }
+
+.btn-back {
+  float: left; }
+
+.btn-copy,
+.btn-share {
+  float: right;
+  margin-right: 8px;
+  border-radius: 100%; }
 
 /*# sourceMappingURL=index.css.map */

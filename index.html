@@ -43,8 +43,8 @@
           Regards,<br>
           Mike
         </p>
-        </main>
-      <div class="processing-bar">進度：■■□□□</div>
+      </main>
+      <img class="processing-bar" src="" width="75" height="75" />
     </section>
 
 
@@ -63,7 +63,17 @@
           <button id="fbShareBtn" class="btn  btn-action btn-share"><i class="material-icons">share</i></button>
         </div>
       </main>
+      <div class="output-copy">
+        <p class="output-copy__wow">Yes!</p>
+        <p class="output-copy__msg">完美回覆已經成功複製到剪貼簿囉 :)</p>
+      </div>
+      <div class="output-actions">
+        <button class="btn  btn-action btn-back"><!-- <i class="material-icons">keyboard_arrow_left</i> --><span>我有新的客戶問題</span></button>
+        <button class="btn  btn-action btn-copy"><i class="material-icons">content_copy</i></button>
+        <button class="btn  btn-action btn-share"><i class="material-icons">share</i></button>
+      </div>
     </section>
+
 
     <!-- Modal -->
     <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -84,13 +94,13 @@
 
 
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
+    <!-- We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    and Electron <script>document.write(process.versions.electron)</script>. -->
 
 
     <!-- 取得答案之測試按鈕 -->
-    <button onclick="aa.alertAnswer()">取得答案</button>
+    <!-- <button onclick="aa.alertAnswer()">取得答案</button> -->
 
     <script>
       var ValidateService = require('./validateService.js')
@@ -117,6 +127,8 @@
           function(data) {
             stuffFlyAway();
             stepOneSlideUp();
+            stepTwoSlideUp();
+            // stepThreeSplit();
             inputContentService.render(data.text);
             aa.getAnswer().then(function(text){
               clipboard.writeText(text)
@@ -145,7 +157,26 @@
       function stepOneSlideUp() {
         $('.app-header').addClass('is-silde-up');
         $('.input-area').addClass('is-silde-up');
+        $('.step-1').addClass('is-slide-up');
       }
+
+      function stepTwoSlideUp() {
+        $('.input').addClass('is-slide-up');
+        window.setTimeout(function(){
+          $('.processing-bar')
+            .show()
+            .attr('src', 'img/step-2/Step2_TimeCounter.gif');
+        }, 3000);
+      }
+
+      function stepThreeSplit() {
+        window.setTimeout(function(){
+          $('.input').fadeOut('400');
+          $('.step-2').addClass('is-slide-up');
+        }, 6000);
+       
+      }
+
     </script>
   </body>
 </html>
