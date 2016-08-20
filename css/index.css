@@ -28,7 +28,17 @@ p {
 h1, h3 {
   font-weight: normal; }
 
+@keyframes shining-animation {
+  0% {
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.2); }
+  100% {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); } }
 body {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
   background-color: #2f81a3;
   color: #ffffff;
   font-family: 'NotoSans-light' !important; }
@@ -186,7 +196,7 @@ section {
     height: 0; }
 
 .input {
-  width: 400px;
+  width: 500px;
   margin: 150px auto 0;
   line-height: 1.8;
   text-align: left;
@@ -196,6 +206,17 @@ section {
 
 .input__title {
   display: none; }
+
+.input__content {
+  position: relative;
+  padding: 15px 30px; }
+  .input__content::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    animation: shining-animation 2s infinite; }
 
 .processing-bar {
   display: none;
@@ -210,7 +231,7 @@ section {
 .output {
   position: relative;
   width: 350px;
-  height: 470px;
+  height: 400px;
   margin: 0 auto; }
 
 .output__title {
@@ -223,6 +244,7 @@ section {
   margin: 0;
   padding-left: 15px;
   background: url("../img/step-3/img-step-3-title-flag.svg") no-repeat;
+  font-family: 'NotoSans-medium';
   line-height: 38px; }
 
 .output__content {
@@ -230,7 +252,7 @@ section {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 50px 30px;
   background-color: #fffaf4;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
   color: #424242;
