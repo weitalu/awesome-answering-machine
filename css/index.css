@@ -198,4 +198,42 @@ section {
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.output {
+  position: relative;
+  width: 350px;
+  height: 470px;
+  margin: 0 auto; }
+
+.output__title {
+  position: absolute;
+  z-index: 100;
+  left: -20px;
+  top: -20px;
+  width: 150px;
+  height: 38px;
+  margin: 0;
+  padding-left: 3px;
+  background: url("../img/step-3/img-step-3-title-flag.svg") no-repeat;
+  line-height: 38px; }
+
+.output__content {
+  position: relative;
+  width: 350px;
+  height: 470px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background-color: #fffaf4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  color: #424242;
+  text-align: left; }
+  .output__content::after {
+    content: '';
+    position: absolute;
+    z-index: -100;
+    right: -80px;
+    bottom: -55px;
+    width: 145px;
+    height: 150px;
+    background: url("../img/step-3/img-step-3-envelop.svg"); }
+
 /*# sourceMappingURL=index.css.map */
