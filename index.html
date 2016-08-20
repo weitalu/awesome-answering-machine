@@ -94,10 +94,11 @@
     <script>
       var ValidateService = require('./validateService.js')
       var ModalService = require('./modalService.js')
-      var InputContentService = require('./inputContentService.js')
+      var RenderContentService = require('./renderContentService.js')
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
-      var inputContentService = new InputContentService('.input__content')
+      var inputContentService = new RenderContentService('.input__content')
+      var outputContentService = new RenderContentService('.output__content')
 
       $('#getReplyBtn').on('click', onGetReply);
       $('#fbShareBtn').on('click',onShareFb);
@@ -111,11 +112,11 @@
       }
 
       function onGetReply (e) {
-        validateService.validate().done(
+        validateService.validate()
+        .then(stepOne)
+        .then(stepTwo)
+        .done(
           function(data) {
-            stuffFlyAway();
-            stepOneSlideUp();
-            inputContentService.render(data.text);
           },
           function(error) {
             if (error.type == 'string_empty') {
@@ -127,6 +128,17 @@
             }
           }
         );
+      }
+
+      function stepOne(data) {
+        stuffFlyAway();
+        stepOneSlideUp();
+        inputContentService.render(data.text);
+        return aa.fetchAnswer(data.text);
+      }
+
+      function stepTwo(answer) {
+        outputContentService.render(answer);
       }
 
       function stuffFlyAway() {
