@@ -54,7 +54,11 @@ section {
 
 .step-1 {
   position: relative;
-  padding-top: 159px; }
+  padding-top: 159px;
+  transition: all 0.6s ease-out 0.6s; }
+  .step-1.is-slide-up {
+    height: 0;
+    padding-top: 100px; }
 
 .app-header,
 .input-area {
@@ -171,5 +175,15 @@ section {
   .stuff--bottom-right.is-fly-away {
     bottom: -250px;
     right: -120px; }
+
+.input {
+  width: 400px;
+  margin: 150px auto 0;
+  transition: all 0.6s ease-out 0.6s; }
+  .input.is-slide-up {
+    margin: 0 auto 0; }
+
+.input__title {
+  display: none; }
 
 /*# sourceMappingURL=index.css.map */

@@ -106,6 +106,7 @@
           function(data) {
             stuffFlyAway();
             stepOneSlideUp();
+            stepTwoSlideUp();
             inputContentService.render(data.text);
           },
           function(error) {
@@ -130,7 +131,13 @@
       function stepOneSlideUp() {
         $('.app-header').addClass('is-silde-up');
         $('.input-area').addClass('is-silde-up');
+        $('.step-1').addClass('is-slide-up');
       }
+
+      function stepTwoSlideUp() {
+        $('.input').addClass('is-slide-up');
+      }
+
     </script>
   </body>
 </html>
