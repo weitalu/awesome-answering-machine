@@ -29,6 +29,9 @@ h1, h3 {
   font-weight: normal; }
 
 body {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
   background-color: #2f81a3;
   color: #ffffff;
   font-family: 'NotoSans-light' !important; }
@@ -94,7 +97,8 @@ section {
   top: 0;
   width: 150px;
   height: 180px;
-  background: url("../img/step-1/img-step-1-paper-ball-a.svg") no-repeat 10px 15px; }
+  background: url("../img/step-1/img-step-1-paper-ball-a.svg") no-repeat 10px 15px;
+  transition: all 0.5s ease-out; }
   .stuff--top-left::after {
     content: '';
     position: absolute;
@@ -103,6 +107,9 @@ section {
     left: 0;
     right: 0;
     background: url("../img/step-1/img-step-1-paper-ball-b.svg") no-repeat 70px 90px; }
+  .stuff--top-left.is-fly-away {
+    left: -300px;
+    top: -300px; }
 
 .stuff--top-right {
   width: 380px;
@@ -110,7 +117,8 @@ section {
   top: -200px;
   right: -120px;
   background: url("../img/step-1/img-step-1-top-right-paper.svg") no-repeat 50px 10px;
-  transform: rotateZ(35deg); }
+  transform: rotateZ(35deg);
+  transition: all 0.5s ease-out; }
   .stuff--top-right::after {
     content: '';
     position: absolute;
@@ -119,6 +127,9 @@ section {
     left: 0;
     right: 0;
     background: url("../img/step-1/img-step-1-paper-ball-c.svg") no-repeat 280px 410px; }
+  .stuff--top-right.is-fly-away {
+    top: -500px;
+    right: -420px; }
 
 .stuff--bottom-left {
   width: 250px;
@@ -126,7 +137,8 @@ section {
   bottom: -80px;
   left: -20px;
   background: url("../img/step-1/img-step-1-bottom-left-paper.svg") no-repeat -140px 40px;
-  transform: rotateZ(-20deg); }
+  transform: rotateZ(-20deg);
+  transition: all 0.5s ease-out; }
   .stuff--bottom-left::after {
     content: '';
     position: absolute;
@@ -136,6 +148,9 @@ section {
     right: 0;
     background: url("../img/step-1/img-step-1-pen.svg") no-repeat 145px 25px;
     transform: rotateZ(60deg); }
+  .stuff--bottom-left.is-fly-away {
+    bottom: -380px;
+    left: -320px; }
 
 .stuff--bottom-right {
   width: 12px;
@@ -143,6 +158,10 @@ section {
   bottom: 50px;
   right: 180px;
   background: url("../img/step-1/img-step-1-pencil.svg") no-repeat;
-  transform: rotateZ(155deg); }
+  transform: rotateZ(155deg);
+  transition: all 0.5s ease-out; }
+  .stuff--bottom-right.is-fly-away {
+    bottom: -250px;
+    right: -120px; }
 
 /*# sourceMappingURL=index.css.map */

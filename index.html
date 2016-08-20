@@ -107,9 +107,16 @@
         validateService.validate()
         .done(
           function(data) {
-
+            $('.stuff--top-left').addClass('is-fly-away');
+            $('.stuff--top-right').addClass('is-fly-away');
+            $('.stuff--bottom-left').addClass('is-fly-away');
+            $('.stuff--bottom-right').addClass('is-fly-away');
           },
           function(error) {
+            $('.stuff--top-left').addClass('is-fly-away');
+            $('.stuff--top-right').addClass('is-fly-away');
+            $('.stuff--bottom-left').addClass('is-fly-away');
+            $('.stuff--bottom-right').addClass('is-fly-away');
             if (error.type == 'string_empty') {
               modalService.show('沒有複製內容')
             }

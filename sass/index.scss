@@ -135,6 +135,7 @@ section {
 	width: 150px;
 	height: 180px;
 	background: url('../img/step-1/img-step-1-paper-ball-a.svg') no-repeat 10px 15px;
+	transition: all 0.5s ease-out;
 
 	&::after {
 		content: '';
@@ -145,6 +146,11 @@ section {
 		right: 0;
 		background: url('../img/step-1/img-step-1-paper-ball-b.svg') no-repeat 70px 90px;
 	}
+
+	&.is-fly-away {
+		left: -300px;
+		top: -300px;
+	}
 }
 
 .stuff--top-right {
@@ -154,6 +160,7 @@ section {
     right: -120px;
 	background: url('../img/step-1/img-step-1-top-right-paper.svg') no-repeat 50px 10px;
 	transform: rotateZ(35deg);
+	transition: all 0.5s ease-out;
 
 	&::after {
 		content: '';
@@ -164,6 +171,11 @@ section {
 		right: 0;
 		background: url('../img/step-1/img-step-1-paper-ball-c.svg') no-repeat 280px 410px;
 	}
+
+	&.is-fly-away {
+		top: -500px;
+	    right: -420px;
+	}
 }
 
 .stuff--bottom-left {
@@ -173,6 +185,7 @@ section {
     left: -20px;
     background: url("../img/step-1/img-step-1-bottom-left-paper.svg") no-repeat -140px 40px;
     transform: rotateZ(-20deg);
+    transition: all 0.5s ease-out;
 
     &::after {
     	content: '';
@@ -184,6 +197,11 @@ section {
     	background: url('../img/step-1/img-step-1-pen.svg') no-repeat 145px 25px;
     	transform: rotateZ(60deg);
     }
+
+    &.is-fly-away {
+		bottom: -380px;
+		left: -320px;
+    }
 }
 
 .stuff--bottom-right {
@@ -193,4 +211,10 @@ section {
 	right: 180px;
 	background: url("../img/step-1/img-step-1-pencil.svg") no-repeat;
 	transform: rotateZ(155deg);
+	transition: all 0.5s ease-out;
+
+	&.is-fly-away {
+		bottom: -250px;
+		right: -120px;
+	}
 }
