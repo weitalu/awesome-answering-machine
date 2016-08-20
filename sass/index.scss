@@ -62,6 +62,9 @@ h1, h3 { font-weight: normal; }
 
 // General Styles
 body {
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
 	background-color: $color-bg;
 	color: $color-text-1;
 	font-family: 'NotoSans-light' !important;

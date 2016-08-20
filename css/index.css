@@ -36,6 +36,9 @@ h1, h3 {
     width: 100%;
     background-color: rgba(255, 255, 255, 0); } }
 body {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
   background-color: #2f81a3;
   color: #ffffff;
   font-family: 'NotoSans-light' !important; }
