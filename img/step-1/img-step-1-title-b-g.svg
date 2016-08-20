@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="337px" height="88px" viewBox="0 0 337 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>5189333D-2BBA-4703-AD90-23BB90997C16</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="mockup_element" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AAM_mockup_Step1" transform="translate(-34.000000, -628.000000)">
+            <g id="img_step1_TitleBG" filter="url(#filter-1)" transform="translate(34.000000, 628.000000)">
+                <g id="Group" transform="translate(320.000000, 50.500000) scale(-1, 1) translate(-320.000000, -50.500000) translate(303.000000, 15.000000)">
+                    <polygon id="Rectangle-2-Copy" fill="#F67373" points="7.52738176 35.5 0 0 34 0 34 71 0 71"></polygon>
+                    <polygon id="Path-2" fill="#E65E5E" points="18.3783784 54.9066667 33.9885302 70.9881839 33.9885302 55.0377997"></polygon>
+                </g>
+                <g id="Group" transform="translate(0.000000, 15.000000)">
+                    <polygon id="Rectangle-2-Copy" fill="#F67373" points="7.52738176 35.5 0 0 34 0 34 71 0 71"></polygon>
+                    <polygon id="Path-2" fill="#E65E5E" points="18.3783784 54.9066667 33.9885302 70.9881839 33.9885302 55.0377997"></polygon>
+                </g>
+                <polygon id="Rectangle-2" fill="#FC8686" points="19 0 168.5 0 318 0 318 71 19 71"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
