@@ -249,6 +249,7 @@ section {
 .input {
 	width: 400px;
 	margin: 150px auto 0;
+	line-height: 1.8;
 	text-align: left;
 	transition: all 0.6s ease-out 0.6s;
 	
@@ -259,6 +260,10 @@ section {
 
 .input__title {
 	display: none;
+}
+
+.input__content {
+	
 }
 
 .processing-bar {
