@@ -8,7 +8,7 @@ var ValidateService = function(options) {
 
 ValidateService.prototype = _.assignIn(ValidateService.prototype, {
   _defaultOptions: {
-    textLengthLimit: 160,
+    lengthLimit: 160,
   },
   validate: function() {
     var text = clipboard.readText('String').trim();
@@ -22,7 +22,7 @@ ValidateService.prototype = _.assignIn(ValidateService.prototype, {
       deferred.reject({type: 'string_too_long', message: 'String too long'});
     }
 
-    deferred.resolve({type: 'success', message: 'Success'});
+    deferred.resolve({type: 'success', message: 'Success', text: text});
 
     return deferred.promise;
   },
