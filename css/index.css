@@ -40,7 +40,6 @@ section {
 
 .btn-action {
   margin-top: 0;
-  padding: 10px 20px;
   border: none;
   color: #ffffff;
   background-color: #ff7373;
@@ -49,6 +48,7 @@ section {
   .btn-action:hover, .btn-action:focus, .btn-action:active {
     margin-top: 3px;
     background-color: #df5151;
+    box-shadow: 0 0 0 0 #de5f5f;
     color: #ffc2c2;
     box-shadow: none; }
 
@@ -74,6 +74,7 @@ section {
   margin-top: 64px; }
 
 .inut-area__tip {
+  padding: 10px 20px;
   margin-bottom: 18px;
   font-family: 'NotoSans-medium'; }
 

@@ -60,7 +60,6 @@ section {
 
 .btn-action {
 	margin-top: 0;
-	padding: 10px 20px;
 	border: none;
 	color: $color-text-1;
 	background-color: $color-button;
@@ -70,6 +69,7 @@ section {
 	&:hover, &:focus, &:active {
 		margin-top: 3px;
 		background-color: $color-button--hover;
+		box-shadow: 0 0 0 0 $color-button--shadow;
 		color: #ffc2c2;
 		box-shadow: none;
 	}
@@ -108,6 +108,7 @@ section {
 }
 
 .inut-area__tip {
+	padding: 10px 20px;
 	margin-bottom: 18px;
 	font-family: 'NotoSans-medium';
 }
