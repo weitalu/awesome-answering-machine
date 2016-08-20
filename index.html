@@ -6,6 +6,7 @@
     <script>
       // You can also require other files to run in this process
       const aa = require('./renderer.js')
+      const {clipboard} = require('electron');
     </script>
     <script>
       window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
@@ -98,13 +99,14 @@
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
       var inputContentService = new InputContentService('.input__content')
+      var outputContentService = new InputContentService('.output__content')
 
       $('#getReplyBtn').on('click', onGetReply);
       $('#fbShareBtn').on('click',onShareFb);
 
       function onShareFb(){
         aa.fbShare().then(function(data){
-          modalService.show({title:'',body:'請到 "https://www.facebook.com/device" 輸入以下驗證碼'+data.user_code'以分享本App至您的facebook'});
+          modalService.show({title:'',body:'請到 "https://www.facebook.com/device" 輸入以下驗證碼'+data.user_code+'以分享本App至您的facebook'});
         },function(err){
           alert("hi");
         })
@@ -116,6 +118,10 @@
             stuffFlyAway();
             stepOneSlideUp();
             inputContentService.render(data.text);
+            aa.getAnswer().then(function(text){
+              clipboard.writeText(text)
+              outputContentService.render(text)
+            })
           },
           function(error) {
             if (error.type == 'string_empty') {

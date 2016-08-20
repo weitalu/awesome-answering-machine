@@ -10,10 +10,8 @@ module.exports = {
                     var text = clipboard.readText("String");
                     alert(text);
                 },
-        "alertAnswer" : function (){
-             answerAsync().then(function(text){
-                 alert(text);
-             })
+        "getAnswer" : function (){
+             return answerAsync()
         },
         "fbShare":function(){
             return fbShareAsync()
