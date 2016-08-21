@@ -141,18 +141,19 @@
         stepTwoSlideUp();
         stepThreeSplit();
         inputContentService.render(data.text);
-        return aa.fetchAnswer(data.text);
+        return aa.getAnswer(data.text);
       }
 
       function stepTwo(answer) {
-        clipboard.writeText(util.format(
+        answer = util.format(
         `尊敬的客戶您好：
 
            %s
 
         Best Regards,
 
-        親切的工程師`,answer))
+        親切的工程師`, answer)
+        clipboard.writeText(answer)
         outputContentService.render(answer)
       }
 
