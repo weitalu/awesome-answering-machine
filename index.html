@@ -7,6 +7,7 @@
       // You can also require other files to run in this process
       const aa = require('./renderer.js')
       const {clipboard} = require('electron');
+      const util = require('util')
     </script>
     <script>
       window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
@@ -127,7 +128,14 @@
             stepThreeSplit();
             inputContentService.render(data.text);
             aa.getAnswer().then(function(text){
-              clipboard.writeText(text)
+              clipboard.writeText(util.format(
+`尊敬的客戶您好：
+
+   %s
+
+Best Regards,
+
+親切的工程師`,text))
               outputContentService.render(text)
             })
           },
