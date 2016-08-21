@@ -105,13 +105,8 @@
       var RenderContentService = require('./renderContentService.js')
       var validateService = new ValidateService({lengthLimit: 250})
       var modalService = new ModalService('#validateModal')
-<<<<<<< bee2dc7f1ca612069d4cd0f3db5654677a37338b
-      var inputContentService = new InputContentService('.input__content')
-      var outputContentService = new InputContentService('.output__answer')
-=======
       var inputContentService = new RenderContentService('.input__content')
       var outputContentService = new RenderContentService('.output__content')
->>>>>>> Integrate with answering flow
 
       $('#getReplyBtn').on('click', onGetReply);
       $('#fbShareBtn').on('click',onShareFb);
