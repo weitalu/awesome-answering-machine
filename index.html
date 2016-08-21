@@ -125,7 +125,7 @@
         .then(stepTwo)
       }
 
-      function onValidateError() {
+      function onValidateError(error) {
         if (error.type == 'string_empty') {
           modalService.show({title: '', body:'沒有複製內容'})
         }

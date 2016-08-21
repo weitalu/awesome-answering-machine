@@ -18,7 +18,7 @@ ValidateService.prototype = _.assignIn(ValidateService.prototype, {
       deferred.reject({type: 'string_empty', message: 'String empty'});
     }
 
-    if (text.length > this._options.textLengthLimit) {
+    if (text.length > this._options.lengthLimit) {
       deferred.reject({type: 'string_too_long', message: 'String too long'});
     }
 
